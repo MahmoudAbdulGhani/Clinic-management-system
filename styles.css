@@ -1,0 +1,167 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #28A745;
+    --accent-color: #FFC107;
+    --dark-text: #343A40;
+    --light-bg: #F8F9FA;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding-top: 70px; /* Ensures navbar doesn't overlap content */
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+/* Navbar Logo Styling */
+.navbar-brand img {
+    height: auto; /* Scales proportionally */
+    max-height: 80px; /* Limits height for navbar balance */
+    width: 100%; /* Maintains aspect ratio */
+    margin: 0; /* Centers vertically */
+    padding: 0; /* Removes extra padding */
+    
+}
+
+/* Ensure all images are responsive 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+*/
+
+
+.navbar-nav .nav-link {
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+/* Styling for the active link */
+.navbar-nav .nav-link.active {
+    color: var(--primary-color); /* Highlight color */
+    font-weight: bold; /* Make the active link bold */
+    text-decoration: underline; /* Optional: Underline for emphasis */
+}
+
+
+/* Welcome Section */
+#welcome {
+    padding: 80px 0;
+    text-align: center;
+}
+#welcome h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+#welcome img {
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* About Us Section */
+#about {
+    padding: 80px 0;
+    background-color: white;
+}
+#about h2 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+#about img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+.contact-info {
+    font-size: 1.2rem;
+}
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+textarea {
+    resize: none;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Centering the Send Button */
+.text-center .btn {
+    display:block;
+    margin: 0 auto;
+    width:30%;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 40px; /* Smaller logo for mobile screens */
+    }
+    #welcome h1 {
+        font-size: 2rem;
+    }
+}
